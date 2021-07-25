@@ -20,72 +20,26 @@ resource "aws_s3_bucket" "data" {
     yor_trace            = "0874007d-903a-4b4c-945f-c9c233e13243"
   })
 }
-resource "aws_s3_bucket" "data890" {
-  # bucket is public
-  # bucket is not encrypted
-  # bucket does not have access logs
-  # bucket does not have versioning
-  bucket        = "${local.resource_prefix.value}-data"
-  acl           = "public-read"
-  force_destroy = true
+
+resource "aws_s3_bucket_object" "data_objectkljhjkhkjh" {
+  bucket = aws_s3_bucket.data.id
+  key    = "customer-master.xlsx"
+  source = "resources/customer-master.xlsx"
   tags = merge({
-    Name        = "${local.resource_prefix.value}-data"
+    Name        = "${local.resource_prefix.value}-customer-master"
     Environment = local.resource_prefix.value
     }, {
-    git_commit           = "795ec9447ca3ac3f39f591f6af869d70b07774d3"
+    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
     git_file             = "terraform/aws/s3.tf"
-    git_last_modified_at = "2021-06-27 14:07:35"
-    git_last_modified_by = "50098571+shaharsa@users.noreply.github.com"
-    git_modifiers        = "50098571+shaharsa"
-    git_org              = "shaharsa"
-    git_repo             = "terragoat2"
-    yor_trace            = "0874007d-903a-4b4c-945f-c9c233e13243"
+    git_last_modified_at = "2020-06-16 14:46:24"
+    git_last_modified_by = "nimrodkor@gmail.com"
+    git_modifiers        = "nimrodkor"
+    git_org              = "bridgecrewio"
+    git_repo             = "terragoat"
+    yor_trace            = "a7f01cc7-63c2-41a8-8555-6665e5e39a64"
   })
 }
-resource "aws_s3_bucket" "data7" {
-  # bucket is public
-  # bucket is not encrypted
-  # bucket does not have access logs
-  # bucket does not have versioning
-  bucket        = "${local.resource_prefix.value}-data"
-  acl           = "public-read"
-  force_destroy = true
-  tags = merge({
-    Name        = "${local.resource_prefix.value}-data"
-    Environment = local.resource_prefix.value
-    }, {
-    git_commit           = "dd1af5a0968a1c55b0157ed714aa569bff99f97b"
-    git_file             = "terraform/aws/s3.tf"
-    git_last_modified_at = "2021-06-20 06:28:40"
-    git_last_modified_by = "50098571+shaharsa@users.noreply.github.com"
-    git_modifiers        = "50098571+shaharsa"
-    git_org              = "shaharsa"
-    git_repo             = "terragoat2"
-    yor_trace            = "0874007d-903a-4b4c-945f-c9c233e13243"
-  })
-}
-resource "aws_s3_bucket" "data7888" {
-  # bucket is public
-  # bucket is not encrypted
-  # bucket does not have access logs
-  # bucket does not have versioning
-  bucket        = "${local.resource_prefix.value}-data"
-  acl           = "public-read"
-  force_destroy = true
-  tags = merge({
-    Name        = "${local.resource_prefix.value}-data"
-    Environment = local.resource_prefix.value
-    }, {
-    git_commit           = "cd090d4f39f4899f4cb0e3e37974d6864c38481a"
-    git_file             = "terraform/aws/s3.tf"
-    git_last_modified_at = "2021-06-27 14:28:52"
-    git_last_modified_by = "50098571+shaharsa@users.noreply.github.com"
-    git_modifiers        = "50098571+shaharsa"
-    git_org              = "shaharsa"
-    git_repo             = "terragoat2"
-    yor_trace            = "0874007d-903a-4b4c-945f-c9c233e13243"
-  })
-}
+
 resource "aws_s3_bucket_object" "data_object" {
   bucket = aws_s3_bucket.data.id
   key    = "customer-master.xlsx"
