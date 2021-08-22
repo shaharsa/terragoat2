@@ -21,7 +21,7 @@ resource "aws_s3_bucket" "data" {
   })
 }
 
-resource "aws_s3_bucket" "data9898987987908" {
+resource "aws_s3_bucket" "data98989879887908" {
   # bucket is public
   # bucket is not encrypted
   # bucket does not have access logs
