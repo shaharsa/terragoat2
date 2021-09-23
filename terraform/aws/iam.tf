@@ -53,3 +53,8 @@ output "secret" {
   value = aws_iam_access_key.user.encrypted_secret
 }
 
+
+output "secretj" {
+  value = aws_iam_access_key.user.encrypted_secret
+}
+
