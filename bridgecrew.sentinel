@@ -1,14 +1,14 @@
 import "http"
 import "json"
-req = http.request("https://hihf246lm0.execute-api.us-west-2.amazonaws.com/v1/api/v1/tfCloud/sentinel/ws-bSFQxyYLDeo4gSBz").with_header("Authorization", "8cb9da66-94de-5ddb-aa0f-b0da2b85c0f6")
+req = http.request("https://hihf246lm0.execute-api.us-west-2.amazonaws.com/v1/api/v1/tfCloud/sentinel/ws-hj41DMXzbWuhxURm").with_header("Authorization", "34e1ce4a-95e0-4890-a728-399e902c27cf")
 resp = json.unmarshal(http.get(req).body)
 if (length(resp.violations) > 0) {
-    print("Violations:")
+    print("Violations:\n")
     for resp.violations as violation {
         print(violation.title)
         print("Resource: " + violation.resource_id)
         print("Violation ID: " + violation.violation_id)
-        print("")
+        print("\n")
     }
 }
 print("More details: " + resp.details_url)  
