@@ -21,7 +21,7 @@ resource "aws_s3_bucket" "data" {
   })
 }
 
-resource "aws_s3_bucket_object" "data_objectkljhjkhkjh" {
+resource "aws_s3_bucket_object" "data_asddsaaobjectkljhsadsdaasjkasdsdaasddshkjh" {
   bucket = aws_s3_bucket.data.id
   key    = "customer-master.xlsx"
   source = "resources/customer-master.xlsx"
@@ -40,7 +40,7 @@ resource "aws_s3_bucket_object" "data_objectkljhjkhkjh" {
   })
 }
 
-resource "aws_s3_bucket_object" "data_object" {
+resource "aws_s3_bucket_object" "data_obdsadasject" {
   bucket = aws_s3_bucket.data.id
   key    = "customer-master.xlsx"
   source = "resources/customer-master.xlsx"
